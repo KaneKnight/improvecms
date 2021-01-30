@@ -10,7 +10,9 @@ services:
       - caddy_data:/data
       - caddy_config:/config
     networks:
-      - web  
+      - web
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"    
   cms:
     image: kaneknight/improvecms
     ports:

@@ -3,5 +3,5 @@ improveatinvesting.com {
 }
 
 api.improveatinvesting.com {
-    reverse_proxy 127.0.0.1:1337
+    reverse_proxy host.docker.internal:1337
 }
