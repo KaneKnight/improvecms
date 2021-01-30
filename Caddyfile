@@ -1,0 +1,7 @@
+localhost {
+    respond "Hello"
+}
+
+api.improveatinvesting.com {
+    reverse_proxy host.docker.internal:1337
+}

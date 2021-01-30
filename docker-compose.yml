@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  caddy:
+    image: caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - web  
+  cms:
+    image: kaneknight/cms
+    ports:
+      - "1337:1337"
+    networks:
+      - web  
+
+networks:
+  web:
+    
+volumes:
+  caddy_data:
+  caddy_config:    
