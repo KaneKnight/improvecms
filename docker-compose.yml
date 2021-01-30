@@ -21,7 +21,13 @@ services:
       - web  
     environment:
       - DATABASE_URI
-      - URL  
+      - URL
+  frontend:
+    image: kaneknight/improvefrontend
+    ports:
+      - "3000:3000"
+    networks:
+      - web
 
 networks:
   web:
