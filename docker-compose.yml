@@ -17,6 +17,9 @@ services:
       - "1337:1337"
     networks:
       - web  
+    environment:
+      - DATABASE_URI
+      - URL  
 
 networks:
   web:
