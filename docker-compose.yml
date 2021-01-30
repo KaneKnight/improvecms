@@ -12,7 +12,7 @@ services:
     networks:
       - web  
   cms:
-    image: kaneknight/cms
+    image: kaneknight/improvecms
     ports:
       - "1337:1337"
     networks:
