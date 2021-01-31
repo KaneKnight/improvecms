@@ -1,4 +1,14 @@
 module.exports = ({ env }) => ({
+    graphql: {
+        endpoint: '/graphql',
+        shadowCRUD: true,
+        playgroundAlways: true,
+        depthLimit: 7,
+        amountLimit: 100,
+        apolloServer: {
+          tracing: false,
+        },
+    },
     upload: {
       provider: 'aws-s3',
       providerOptions: {
